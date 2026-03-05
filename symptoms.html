@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptoms: Recognizing the Warning Signs</title>
+    <meta name="description" content="Learn to identify the early, often subtle warning signs of tuberculosis to ensure a prompt diagnosis and prevent long-term health complications.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        [x-cloak] { display: none !important; }
+        sup { font-size: 10px; color: rgb(59 130 246); font-weight: 500; margin-left: 0.125rem; vertical-align: super; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50/40 to-slate-100 antialiased tracking-tight text-slate-900 min-h-screen flex flex-col">
+
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-lg border border-white/60 shadow-sm">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-blue-700 font-extrabold text-lg tracking-tight">TB Info Hub</a>
+                <div x-data="{ open: false }" class="lg:hidden">
+                    <button @click="open = !open" class="p-2 rounded-lg hover:bg-slate-100 transition" aria-label="Toggle navigation menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                    <div x-show="open" x-cloak @click.away="open = false" class="absolute right-4 top-16 w-64 bg-white/95 backdrop-blur-2xl shadow-2xl border border-slate-200 z-[100] rounded-2xl p-4 space-y-2">
+                        <a href="index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Home</a>
+                        <a href="what-is-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">What is TB?</a>
+                        <a href="symptoms.html" class="block px-3 py-2 rounded-lg text-blue-700 font-semibold bg-blue-50">Symptoms</a>
+                        <a href="triggers-and-transmission.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Triggers and Transmission</a>
+                        <a href="managing-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Managing TB</a>
+                        <a href="when-to-seek-help.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">When to Seek Help</a>
+                        <a href="living-well-with-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Living Well with TB</a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Home</a>
+                    <a href="what-is-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">What is TB?</a>
+                    <a href="symptoms.html" class="px-3 py-2 text-sm font-semibold text-blue-700 border-b-2 border-blue-700">Symptoms</a>
+                    <a href="triggers-and-transmission.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Triggers and Transmission</a>
+                    <a href="managing-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Managing TB</a>
+                    <a href="when-to-seek-help.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">When to Seek Help</a>
+                    <a href="living-well-with-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Living Well with TB</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+
+        <!-- Hero -->
+        <section class="px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6">Symptoms: Recognizing the Warning Signs</h1>
+                <p class="text-lg text-slate-700 leading-relaxed">The symptoms of tuberculosis are notorious for developing very gradually, which often leads to dangerous, prolonged delays in seeking medical care <sup>[1]</sup>. Because the early signs can easily mimic a common chest cold or general fatigue, <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">many individuals do not realize they are seriously ill for weeks or even months</span> <sup>[2]</sup>. Recognizing both the common lung-related signs and the unusual symptoms in other body parts is critical for your recovery and preventing long-term physical damage <sup>[1]</sup>.</p>
+                <div class="mb-10 overflow-hidden rounded-2xl shadow-lg border border-slate-200/50 transition-transform hover:scale-[1.01] duration-500">
+                    <img src="./assets/images/tb-symptoms-full.jpg" alt="A comprehensive medical illustration showing general, pulmonary, and extrapulmonary symptoms of active tuberculosis." class="w-full h-auto">
+                    <p class="text-sm text-slate-500 text-center py-3 bg-slate-50/80 backdrop-blur-sm px-4">
+                        A comprehensive visual overview of the general, pulmonary, and extrapulmonary symptoms of active tuberculosis<sup class="text-[10px] text-blue-500 font-medium ml-0.5 align-super">[4]</sup>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accordion -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6" x-data="{ active: null }">
+            <div class="max-w-3xl mx-auto space-y-4">
+
+                <!-- Item 1: Pulmonary TB -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 1 ? null : 1" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 1">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Pulmonary TB: Symptoms in the Lungs</h2>
+                            <p class="text-sm text-slate-500 mt-1">The most common form of the disease primarily affects the lungs, causing persistent respiratory and systemic issues.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 1 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 1" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>Persistent Cough:</strong> <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">A deep, wet cough that lasts for more than three weeks</span> and refuses to improve with standard cough medicine <sup>[2]</sup>.</li>
+                            <li><strong>Coughing Blood:</strong> As the bacteria actively damage delicate lung tissue and blood vessels, you may begin coughing up visible red blood or blood-streaked phlegm <sup>[3]</sup>.</li>
+                            <li><strong>Systemic Fevers:</strong> The intense immune response often causes high, spiking fevers and drenching night sweats that can completely soak your bedsheets <sup>[2]</sup>.</li>
+                            <li><strong>Physical Wasting:</strong> You may experience an extreme lack of appetite, leading to rapid, unexplained weight loss and profound fatigue, even after resting fully <sup>[2]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 2: Extrapulmonary TB -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 2 ? null : 2" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 2">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Extrapulmonary TB: Symptoms Outside the Lungs</h2>
+                            <p class="text-sm text-slate-500 mt-1">The bacteria can travel through the bloodstream, affecting almost any organ with highly unspecific, tricky signs.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 2 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 2" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>Lymph Nodes:</strong> The appearance of firm, painless, red or purple swollen lumps under the skin, most commonly found in the neck <sup>[3]</sup>.</li>
+                            <li><strong>Kidneys and Digestion:</strong> Infections in the kidneys can cause dark, cloudy urine or visible blood, while digestive infections may present as severe tummy pain and chronic constipation <sup>[2]</sup>.</li>
+                            <li><strong>Bones and Spine:</strong> Severe, localized back pain, extreme joint stiffness, and painful swellings that severely limit your daily movement <sup>[3]</sup>.</li>
+                            <li><strong>Brain (Medical Emergency):</strong> <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">Extreme headaches, sudden confusion, a severely stiff neck, seizures</span>, and sharp pain when looking at bright lights indicate a highly dangerous, life-threatening complication <sup>[2]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 3: Children -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 3 ? null : 3" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 3">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Warning Signs in Children</h2>
+                            <p class="text-sm text-slate-500 mt-1">Pediatric symptoms are often much subtler and easily missed compared to adult signs.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 3 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 3" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>Subtle Indicators:</strong> <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">Children often show hard-to-read signs, such as an inability to gain healthy weight or a failure to grow properly</span> <sup>[2]</sup>.</li>
+                            <li><strong>Fever Patterns:</strong> A prolonged, low-grade fever that specifically spikes in the evening is a crucial warning sign to watch for in young patients <sup>[2]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- YouTube -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="max-w-2xl mx-auto overflow-hidden rounded-2xl shadow-lg border border-slate-200/60 my-8 transition-transform hover:scale-[1.01] duration-500">
+                    <div class="aspect-video w-full">
+                        <iframe src="https://www.youtube.com/embed/AwZCOa4Y0no?hl=en&cc_lang_pref=en" title="NHS UKHSA TB Symptoms Educational Video" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-500 mt-4 mb-8 text-center">A clear, expert-led visual guide helping you recognize the often-subtle early warning signs of the infection <sup>[5]</sup>.</p>
+            </div>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-blue-700 mb-4">Key Takeaways</h2>
+                    <ul class="space-y-3 text-slate-700 leading-relaxed">
+                        <li>TB symptoms develop slowly and often mimic common illnesses like the flu or general fatigue, making early recognition vital for your health <sup>[1]</sup>.</li>
+                        <li>The classic warning signs include a persistent wet cough lasting over three weeks, unexplained weight loss, and drenching night sweats <sup>[2]</sup>.</li>
+                        <li>The bacteria can adapt to affect areas outside the lungs, causing unusual symptoms like swollen neck glands, severe back pain, or cloudy urine <sup>[3]</sup>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-slate-600 mb-4">Now that you know the symptoms, learn how the bacteria spread from person to person and who is most at risk on our next page:</p>
+                <a href="triggers-and-transmission.html" class="inline-flex items-center gap-2 bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_8px_20px_rgb(37,99,235,0.3)] hover:bg-blue-800 active:translate-y-0 shadow-lg shadow-blue-700/20">
+                    Triggers and Transmission
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- References -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6 pb-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">References</h2>
+                <div class="space-y-3">
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[1]</span> NIHR Leicester Biomedical Research Centre. Local impact of TB in Leicester. NIHR. 2024. Available from: https://leicesterbrc.nihr.ac.uk/wp-content/uploads/2025/03/March2025_TB-impact-report.pdf</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[2]</span> NHS. Tuberculosis (TB) Overview and Symptoms. NHS.uk. Available from: https://www.nhs.uk/conditions/tuberculosis-tb/</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[3]</span> NHS Inform. Tuberculosis (TB) - Symptoms. NHS Scotland. Available from: https://www.nhsinform.scot/illnesses-and-conditions/infections-and-poisoning/tuberculosis-tb/</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[4]</span> Tacoma-Pierce County Health Department. Tuberculosis Infographic. TPCHD. Available from: https://tpchd.org/wp-content/uploads/2023/12/TB-infographic.pdf</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[5]</span> UK Health Security Agency. Tuberculosis (TB) - Five lesser known facts. YouTube. Available from: https://www.youtube.com/watch?v=AwZCOa4Y0no</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200 py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center text-sm text-slate-400">
+            <p>TB Info Hub &mdash; A patient education resource for BS3083. All medical content is referenced from peer-reviewed and institutional sources.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+</body>
+</html>

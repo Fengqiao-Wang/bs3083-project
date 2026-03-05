@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is TB? Understanding the Infection and Your Body's Defense</title>
+    <meta name="description" content="Discover the biology behind Tuberculosis (TB), how your immune system responds to the bacteria, and the critical difference between sleeping and active infections.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        [x-cloak] { display: none !important; }
+        sup { font-size: 10px; color: rgb(59 130 246); font-weight: 500; margin-left: 0.125rem; vertical-align: super; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50/40 to-slate-100 antialiased tracking-tight text-slate-900 min-h-screen flex flex-col">
+
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-lg border border-white/60 shadow-sm">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-blue-700 font-extrabold text-lg tracking-tight">TB Info Hub</a>
+                <div x-data="{ open: false }" class="lg:hidden">
+                    <button @click="open = !open" class="p-2 rounded-lg hover:bg-slate-100 transition" aria-label="Toggle navigation menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                    <div x-show="open" x-cloak @click.away="open = false" class="absolute right-4 top-16 w-64 bg-white/95 backdrop-blur-2xl shadow-2xl border border-slate-200 z-[100] rounded-2xl p-4 space-y-2">
+                        <a href="index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Home</a>
+                        <a href="what-is-tb.html" class="block px-3 py-2 rounded-lg text-blue-700 font-semibold bg-blue-50">What is TB?</a>
+                        <a href="symptoms.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Symptoms</a>
+                        <a href="triggers-and-transmission.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Triggers and Transmission</a>
+                        <a href="managing-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Managing TB</a>
+                        <a href="when-to-seek-help.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">When to Seek Help</a>
+                        <a href="living-well-with-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Living Well with TB</a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Home</a>
+                    <a href="what-is-tb.html" class="px-3 py-2 text-sm font-semibold text-blue-700 border-b-2 border-blue-700">What is TB?</a>
+                    <a href="symptoms.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Symptoms</a>
+                    <a href="triggers-and-transmission.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Triggers and Transmission</a>
+                    <a href="managing-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Managing TB</a>
+                    <a href="when-to-seek-help.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">When to Seek Help</a>
+                    <a href="living-well-with-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Living Well with TB</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+
+        <!-- Hero -->
+        <section class="px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6">What is TB? Understanding the Infection and Your Body&rsquo;s Defense</h1>
+                <p class="text-lg text-slate-700 leading-relaxed">Tuberculosis (TB) is a severe bacterial infection caused by a highly specific germ known as <em>Mycobacterium tuberculosis</em> <sup>[1]</sup>. While it most famously attacks the lungs, the bacteria are highly adaptable and can travel through the bloodstream to infect almost any organ, including the kidneys, spine, and brain <sup>[2]</sup>. Understanding exactly how your body&rsquo;s immune system reacts to these bacteria is the very first step in learning how the condition is safely controlled and permanently cured <sup>[3]</sup>.</p>
+            </div>
+        </section>
+
+        <!-- Accordion -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6" x-data="{ active: null }">
+            <div class="max-w-3xl mx-auto space-y-4">
+
+                <!-- Item 1: Initial Encounter -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 1 ? null : 1" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 1">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">The Initial Encounter: How the Bacteria Enter</h2>
+                            <p class="text-sm text-slate-500 mt-1">The infection begins when microscopic bacteria reach the deepest parts of your lungs.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 1 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 1" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>The Target Area:</strong> The disease is caused by the <em>Mycobacterium tuberculosis</em> bacteria, which <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">most commonly settle and multiply in the tiny, balloon-like air sacs deep inside the lungs</span> <sup>[3]</sup>.</li>
+                            <li><strong>The Inhalation:</strong> When a person breathes in the bacteria, they travel down into the lowest parts of the respiratory system <sup>[4]</sup>.</li>
+                            <li><strong>The First Defense:</strong> Your body&rsquo;s special white blood cells, called macrophages, are immediately deployed to swallow the bacteria. However, these specific germs have a thick, waxy outer coat making them very hard to digest <sup>[5]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 2: Latent TB -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 2 ? null : 2" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 2">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Latent TB: The Sleeping Infection</h2>
+                            <p class="text-sm text-slate-500 mt-1">Your immune system is powerful and often traps the bacteria before they can make you sick.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 2 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 2" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>The Protective Wall:</strong> When the immune system cannot immediately destroy the tough bacteria, it intelligently builds a hard, protective wall around them called a granuloma <sup>[3]</sup>.</li>
+                            <li><strong>The Sleeping State:</strong> <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">If the bacteria are successfully trapped inside this wall, they fall into a deep sleep, known as Latent Tuberculosis Infection (LTBI)</span> <sup>[6]</sup>.</li>
+                            <li><strong>No Contagion Risk:</strong> A person with a latent infection feels completely healthy, experiences zero symptoms, and absolutely cannot pass the germ to friends or family members <sup>[7]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 3: Active TB -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 3 ? null : 3" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 3">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Active TB: When the Infection Wakes</h2>
+                            <p class="text-sm text-slate-500 mt-1">If the immune system weakens, the bacteria can break free and cause active disease.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 3 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 3" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>The Wall Crumbles:</strong> If your immune system becomes weakened over time due to health setbacks like intense stress, poor nutrition, or other chronic illnesses, the protective wall can break down <sup>[3]</sup>.</li>
+                            <li><strong>Rapid Multiplication:</strong> When the wall falls, the bacteria wake up, escape into the open lung tissue, and begin to actively multiply <sup>[3]</sup>.</li>
+                            <li><strong>The Active Phase:</strong> <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">This transition is known as Active Tuberculosis Disease, which causes severe physical symptoms and makes the infection highly contagious to others</span> <sup>[8]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- YouTube -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="max-w-2xl mx-auto overflow-hidden rounded-2xl shadow-lg border border-slate-200/60 my-8 transition-transform hover:scale-[1.01] duration-500">
+                    <div class="aspect-video w-full">
+                        <iframe src="https://www.youtube.com/embed/UKV8Zn7x0wM" title="CDC: Transmission and Pathogenesis of Tuberculosis" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-500 mt-4 mb-8 text-center">An excellent visual animation explaining exactly how the bacteria interact with your immune system inside the lungs <sup>[3]</sup>.</p>
+            </div>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-blue-700 mb-4">Key Takeaways</h2>
+                    <ul class="space-y-3 text-slate-700 leading-relaxed">
+                        <li>TB is caused by specific bacteria that usually target the lungs but can adapt to affect other parts of the body <sup>[1]</sup>.</li>
+                        <li>Many people have &ldquo;Latent TB&rdquo;, meaning their immune system has safely trapped the sleeping bacteria, causing no symptoms and posing no risk of transmission <sup>[6]</sup>.</li>
+                        <li>&ldquo;Active TB&rdquo; occurs when the immune system weakens and the protective wall fails, requiring dedicated medical treatment to cure the infection and stop transmission <sup>[8]</sup>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-slate-600 mb-4">Now that you understand what the bacteria do inside the body, learn how to identify the early warning signs on our next page:</p>
+                <a href="symptoms.html" class="inline-flex items-center gap-2 bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_8px_20px_rgb(37,99,235,0.3)] hover:bg-blue-800 active:translate-y-0 shadow-lg shadow-blue-700/20">
+                    Symptoms: Recognizing the Warning Signs
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- References -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6 pb-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">References</h2>
+                <div class="space-y-3">
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[1]</span> National Center for Biotechnology Information. Tuberculosis (TB). StatPearls. Available from: https://www.ncbi.nlm.nih.gov/books/NBK441916/</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[2]</span> National Institute for Health and Care Excellence (NICE). Tuberculosis: Context. NICE. 2024. Available from: https://www.nice.org.uk/guidance/ng33/chapter/context</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[3]</span> Centers for Disease Control and Prevention. Transmission and pathogenesis of tuberculosis (TB). YouTube. Available from: https://www.youtube.com/watch?v=UKV8Zn7x0wM</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[4]</span> Centers for Disease Control and Prevention. Transmission and Pathogenesis of Tuberculosis. CDC. Available from: https://www.cdc.gov/tb/media/pdfs/Self_Study_Module_1_Transmission_and_Pathogenesis_of_Tuberculosis.pdf</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[5]</span> National Center for Biotechnology Information. Directly Observed Therapy for Tuberculosis. CADTH Rapid Response Reports. Available from: https://www.ncbi.nlm.nih.gov/books/NBK567074/</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[6]</span> Centers for Disease Control and Prevention. Causes of Tuberculosis. CDC. Available from: https://www.cdc.gov/tb/causes/index.html</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[7]</span> Centers for Disease Control and Prevention. About Tuberculosis. CDC. Available from: https://www.cdc.gov/tb/about/index.html</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[8]</span> Centers for Disease Control and Prevention. TB Risk Factors: Country of Birth. CDC. Available from: https://www.cdc.gov/tb/risk-factors/country.html</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200 py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center text-sm text-slate-400">
+            <p>TB Info Hub &mdash; A patient education resource for BS3083. All medical content is referenced from peer-reviewed and institutional sources.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+</body>
+</html>

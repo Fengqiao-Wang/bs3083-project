@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Global and United Kingdom Burden of Tuberculosis</title>
+    <meta name="description" content="Understand the current reality of Tuberculosis (TB), its global impact, and how local healthcare systems in the UK and Leicester are equipped to support your recovery.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        [x-cloak] { display: none !important; }
+        sup { font-size: 10px; color: rgb(59 130 246); font-weight: 500; margin-left: 0.125rem; vertical-align: super; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50/40 to-slate-100 antialiased tracking-tight text-slate-900 min-h-screen flex flex-col">
+
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-lg border border-white/60 shadow-sm">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-blue-700 font-extrabold text-lg tracking-tight">TB Info Hub</a>
+                <!-- Mobile menu button -->
+                <div x-data="{ open: false }" class="lg:hidden">
+                    <button @click="open = !open" class="p-2 rounded-lg hover:bg-slate-100 transition" aria-label="Toggle navigation menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                    <div x-show="open" x-cloak @click.away="open = false" class="absolute right-4 top-16 w-64 bg-white/95 backdrop-blur-2xl shadow-2xl border border-slate-200 z-[100] rounded-2xl p-4 space-y-2">
+                        <a href="index.html" class="block px-3 py-2 rounded-lg text-blue-700 font-semibold bg-blue-50">Home</a>
+                        <a href="what-is-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">What is TB?</a>
+                        <a href="symptoms.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Symptoms</a>
+                        <a href="triggers-and-transmission.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Triggers and Transmission</a>
+                        <a href="managing-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Managing TB</a>
+                        <a href="when-to-seek-help.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">When to Seek Help</a>
+                        <a href="living-well-with-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Living Well with TB</a>
+                    </div>
+                </div>
+                <!-- Desktop nav -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 text-sm font-semibold text-blue-700 border-b-2 border-blue-700">Home</a>
+                    <a href="what-is-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">What is TB?</a>
+                    <a href="symptoms.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Symptoms</a>
+                    <a href="triggers-and-transmission.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Triggers and Transmission</a>
+                    <a href="managing-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Managing TB</a>
+                    <a href="when-to-seek-help.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">When to Seek Help</a>
+                    <a href="living-well-with-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Living Well with TB</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+
+        <!-- Welcome & Disclaimer -->
+        <section class="px-4 sm:px-6 lg:px-8 pt-12 pb-4">
+            <div class="text-center py-10 px-4 max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-slate-800 mb-6 tracking-tight">Navigating Tuberculosis, Together.</h2>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">Welcome to the TB Info Hub. Receiving a diagnosis can feel overwhelming, but you are not alone. This trusted resource is designed to help you understand tuberculosis, recognize symptoms, and safely guide you through your recovery journey.</p>
+                <div class="bg-amber-50/50 border border-amber-200/60 rounded-xl p-5 text-sm text-slate-600 text-left shadow-sm">
+                    <strong>Disclaimer:</strong> This website is a student project created for educational purposes only (BS3083). It is not intended as medical advice. Always consult a qualified healthcare professional or use local urgent services for personal medical concerns.
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-12 border-slate-200/60 max-w-4xl mx-auto">
+
+        <!-- Hero Section -->
+        <section class="px-4 sm:px-6 lg:px-8 pt-4 pb-6">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-3xl font-extrabold text-slate-800 mb-6 tracking-tight">The Global and United Kingdom Burden of Tuberculosis</h1>
+                <p class="text-lg text-slate-700 leading-relaxed">Tuberculosis (TB) is a historic infectious disease that remains an urgent public health priority today <sup>[1]</sup>. While the diagnosis may feel isolating, <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">TB is entirely preventable and curable with the right medical care</span> <sup>[2]</sup>. By understanding the true scale of this illness&mdash;globally, nationally, and locally&mdash;you can navigate your recovery knowing you are supported by advanced, dedicated healthcare resources <sup>[3]</sup>.</p>
+            </div>
+        </section>
+
+        <!-- Accordion Section: Epidemiological Funnel -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6" x-data="{ active: null }">
+            <div class="max-w-3xl mx-auto space-y-4">
+
+                <!-- Accordion Item 1: Global Context -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 1 ? null : 1" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 1">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">The Global Context: A Shared Health Challenge</h2>
+                            <p class="text-sm text-slate-500 mt-1">TB continues to affect millions worldwide, but coordinated global treatment efforts are highly effective.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 1 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 1" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>Annual Impact:</strong> In the past year, an estimated 10.8 million people fell ill with the disease globally <sup>[3]</sup>.</li>
+                            <li><strong>Concentrated Risk:</strong> 87% of all cases are concentrated in just 30 high-burden nations, primarily across Asia and Africa <sup>[4]</sup>.</li>
+                            <li><strong>Medical Success:</strong> Thanks to prompt medical treatment and improved rapid diagnostic testing, <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">global medical efforts have successfully saved roughly 83 million lives since the year 2000</span> <sup>[4]</sup>. The global treatment success rate for standard forms of the disease remains highly effective at 88% <sup>[4]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2: UK Trend -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 2 ? null : 2" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 2">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">TB in the United Kingdom: An Upward Trend</h2>
+                            <p class="text-sm text-slate-500 mt-1">The UK maintains a relatively low incidence, but recent data shows a significant increase requiring urgent public health attention.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 2 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 2" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>National Incidence:</strong> England currently sits at 9.4 cases per 100,000 people, classifying it as a low-incidence country by global standards <sup>[5]</sup>.</li>
+                            <li><strong>Recent Increases:</strong> In 2024, there were 5,490 notified cases in England, <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">marking a 13.6% jump from the previous year&mdash;the largest annual rise since national tracking began in 1971</span> <sup>[5]</sup>.</li>
+                            <li><strong>Social Factors:</strong> The condition is deeply linked to social and health inequalities, heavily impacting marginalized groups and urban areas. Data indicates 81.9% of affected individuals in England were born outside the UK <sup>[5]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3: Leicester Focus -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 3 ? null : 3" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 3">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Focus on Leicester: Local Challenges and Solutions</h2>
+                            <p class="text-sm text-slate-500 mt-1">Leicester faces the highest TB rates in England, prompting the creation of specialized, highly targeted local support systems to guide your care.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 3 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 3" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>Local Rates:</strong> <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">Leicester currently reports the highest rate of the disease in all of England</span>, with a three-year average of 42.1 cases for every 100,000 people <sup>[3]</sup>.</li>
+                            <li><strong>Diagnostic Delays:</strong> Locally, one in three patients experiences a delayed diagnosis of over four months, which can lead to severe illness and high rates of emergency hospital admissions <sup>[3]</sup>.</li>
+                            <li><strong>Dedicated Support:</strong> To combat this and support patients effectively, local NHS centers have developed &ldquo;Rapid Access Pathways&rdquo; <sup>[3]</sup>. Clinics now employ diverse nursing teams and cultural link workers to ensure you receive urgent, understandable, and culturally sensitive care throughout your treatment <sup>[3]</sup>.</li>
+                        </ul>
+                        <div class="mt-6 overflow-hidden rounded-xl shadow-lg border border-slate-200/50 transition-transform hover:scale-[1.01] duration-500">
+                            <img src="assets/images/home-tb-incidence.jpg" alt="Compassionate local healthcare teams and cultural link workers ensuring every patient receives understandable and supportive care." class="w-full">
+                        </div>
+                        <p class="text-sm text-slate-500 mt-2 text-center">Compassionate local healthcare teams and cultural link workers ensuring every patient receives understandable and supportive care.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Video Summary: Relocated below accordions, above Key Takeaways -->
+        <section class="px-4 sm:px-6 lg:px-8 mt-8 mb-12">
+            <div class="max-w-3xl mx-auto">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 px-2">Visual Summary: Global Report 2024</h3>
+                <div class="max-w-2xl mx-auto overflow-hidden rounded-2xl shadow-lg border border-slate-200/60 my-6 transition-transform hover:scale-[1.01] duration-500">
+                    <div class="aspect-video w-full">
+                        <iframe src="https://www.youtube.com/embed/tKIcLG19NxU" title="WHO Global Tuberculosis Report 2024 Summary" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-500 mt-3 text-center">A brief visual overview of the global tuberculosis landscape and treatment progress <sup>[4]</sup>.</p>
+            </div>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-blue-700 mb-4">Key Takeaways</h2>
+                    <ul class="space-y-3 text-slate-700 leading-relaxed">
+                        <li>TB is a completely curable bacterial infection; current global medical treatments have an 88% success rate <sup>[4]</sup>.</li>
+                        <li>The UK has seen a recent rise in cases, largely clustered in urban areas and driven by health and social inequalities <sup>[5]</sup>.</li>
+                        <li>While Leicester has the highest notification rate in England, local healthcare systems have implemented specialized clinical pathways and dedicated teams to ensure you receive rapid, effective care <sup>[3]</sup>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Local Support & Keep in Touch -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="bg-white/60 backdrop-blur-xl border border-white/80 shadow-lg rounded-2xl p-8 max-w-4xl mx-auto">
+                <h2 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-3 mb-6">Local Support &amp; Keep in Touch</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">NHS Telephone Support</h3>
+                        <ul class="space-y-2 text-slate-700 text-sm leading-relaxed">
+                            <li>For non-life-threatening medical queries:<br><span class="text-xl font-bold text-blue-700">NHS Non-Emergency: 111</span></li>
+                            <li>For life-threatening emergencies:<br><span class="text-xl font-bold text-red-600">Medical Emergency: 999</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">Leicester Royal Infirmary</h3>
+                        <ul class="space-y-2 text-slate-700 text-sm leading-relaxed">
+                            <li><strong>Address:</strong> Infirmary Square, Leicester, LE1 5WW</li>
+                            <li><strong>Telephone:</strong> <a href="tel:03003031573" class="text-blue-700 font-semibold hover:underline">0300 303 1573</a></li>
+                            <li><strong>Email:</strong> <a href="mailto:pals@uhl-tr.nhs.uk" class="text-blue-700 font-semibold hover:underline">pals@uhl-tr.nhs.uk</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-slate-600 mb-4">Discover exactly what happens inside your body when exposed to these bacteria and how your immune system responds on our next page:</p>
+                <a href="what-is-tb.html" class="inline-flex items-center gap-2 bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_8px_20px_rgb(37,99,235,0.3)] hover:bg-blue-800 active:translate-y-0 shadow-lg shadow-blue-700/20">
+                    What is TB?
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- References -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6 pb-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">References</h2>
+                <div class="space-y-3">
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[1]</span> National Center for Biotechnology Information. Tuberculosis (TB). StatPearls. Available from: https://www.ncbi.nlm.nih.gov/books/NBK441916/</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[2]</span> BMJ. WHO Global Tuberculosis Report 2024 2025 key facts statistics. BMJ. 2024. Available from: https://www.bmj.com/content/391/bmj.r2390</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[3]</span> NIHR Leicester Biomedical Research Centre. TB impact report 2025. NIHR. 2025. Available from: https://leicesterbrc.nihr.ac.uk/wp-content/uploads/2025/03/March2025_TB-impact-report.pdf</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[4]</span> World Health Organization. Global tuberculosis report 2025. ReliefWeb. 2024. Available from: https://reliefweb.int/report/world/global-tuberculosis-report-2025</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[5]</span> UK Health Security Agency. Tuberculosis in England 2025 report: 1. Tuberculosis incidence and epidemiology, England 2024. GOV.UK. 2024. Available from: https://www.gov.uk/government/publications/tuberculosis-in-england-2025-report/1-tuberculosis-incidence-and-epidemiology-england-2024</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[6]</span> UK Health Security Agency. TB infographics 2025 data to end 2024 text version. GOV.UK. 2025. Available from: https://www.gov.uk/government/publications/tuberculosis-in-england-2025-report/tb-infographics-2025-data-to-end-2024-text-version</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center text-sm text-slate-400">
+            <p>TB Info Hub &mdash; A patient education resource for BS3083. All medical content is referenced from peer-reviewed and institutional sources.</p>
+        </div>
+    </footer>
+
+    <!-- Alpine.js Collapse Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+</body>
+</html>

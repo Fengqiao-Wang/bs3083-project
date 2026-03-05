@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triggers and Transmission: How the Disease Spreads</title>
+    <meta name="description" content="Learn the facts about how Tuberculosis travels through the air, dispel common transmission myths, and understand the specific biological triggers that put certain individuals at risk.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        [x-cloak] { display: none !important; }
+        sup { font-size: 10px; color: rgb(59 130 246); font-weight: 500; margin-left: 0.125rem; vertical-align: super; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50/40 to-slate-100 antialiased tracking-tight text-slate-900 min-h-screen flex flex-col">
+
+    <!-- Sticky Navigation -->
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-lg border border-white/60 shadow-sm">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-blue-700 font-extrabold text-lg tracking-tight">TB Info Hub</a>
+                <div x-data="{ open: false }" class="lg:hidden">
+                    <button @click="open = !open" class="p-2 rounded-lg hover:bg-slate-100 transition" aria-label="Toggle navigation menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                    <div x-show="open" x-cloak @click.away="open = false" class="absolute right-4 top-16 w-64 bg-white/95 backdrop-blur-2xl shadow-2xl border border-slate-200 z-[100] rounded-2xl p-4 space-y-2">
+                        <a href="index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Home</a>
+                        <a href="what-is-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">What is TB?</a>
+                        <a href="symptoms.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Symptoms</a>
+                        <a href="triggers-and-transmission.html" class="block px-3 py-2 rounded-lg text-blue-700 font-semibold bg-blue-50">Triggers and Transmission</a>
+                        <a href="managing-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Managing TB</a>
+                        <a href="when-to-seek-help.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">When to Seek Help</a>
+                        <a href="living-well-with-tb.html" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition">Living Well with TB</a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Home</a>
+                    <a href="what-is-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">What is TB?</a>
+                    <a href="symptoms.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Symptoms</a>
+                    <a href="triggers-and-transmission.html" class="px-3 py-2 text-sm font-semibold text-blue-700 border-b-2 border-blue-700">Triggers and Transmission</a>
+                    <a href="managing-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Managing TB</a>
+                    <a href="when-to-seek-help.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">When to Seek Help</a>
+                    <a href="living-well-with-tb.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-700 border-b-2 border-transparent hover:border-blue-300 transition">Living Well with TB</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+
+        <!-- Hero -->
+        <section class="px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6">Triggers and Transmission: How the Disease Spreads</h1>
+                <p class="text-lg text-slate-700 leading-relaxed">A very common myth is that tuberculosis spreads easily through shaking hands, sharing meals, or touching dirty surfaces like doorknobs <sup>[1]</sup>. In reality, <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">the bacteria follow a strictly airborne route to find a new human host</span> <sup>[1]</sup>. Understanding exactly how the disease travels through the air&mdash;and identifying the specific health and environmental triggers that weaken the immune system&mdash;empowers you and your community to protect its most vulnerable members <sup>[1]</sup>.</p>
+                <div class="mb-10 overflow-hidden rounded-2xl shadow-lg border border-slate-200/50 transition-transform hover:scale-[1.01] duration-500">
+                    <img src="./assets/images/tb-transmission-risks.jpg" alt="Visual breakdown of the three core pillars of TB transmission: airborne spread, crowded spaces, and weak immunity." class="w-full h-auto">
+                    <p class="text-sm text-slate-500 text-center py-3 bg-slate-50/80 backdrop-blur-sm px-4">
+                        Visual breakdown of the three core pillars of TB transmission and susceptibility<sup class="text-[10px] text-blue-500 font-medium ml-0.5 align-super">[4]</sup>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accordion -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6" x-data="{ active: null }">
+            <div class="max-w-3xl mx-auto space-y-4">
+
+                <!-- Item 1: Clearing the Air -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 1 ? null : 1" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 1">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Clearing the Air: How Transmission Works</h2>
+                            <p class="text-sm text-slate-500 mt-1"><span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">The disease spreads exclusively through microscopic airborne droplets, never through casual physical contact.</span></p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 1 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 1" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>The Airborne Route:</strong> The bacteria are spread exclusively through the air; this happens when a person with an active lung or throat infection coughs, sneezes, speaks loudly, or sings <sup>[1]</sup>.</li>
+                            <li><strong>Invisible Droplets:</strong> These actions forcefully expel microscopic droplets, scientifically known as &ldquo;droplet nuclei,&rdquo; from deep within their lungs <sup>[2, 3]</sup>.</li>
+                            <li><strong>Suspended Danger:</strong> Because these droplets are almost entirely weightless, they can float suspended in the air of a closed room for several hours <sup>[2]</sup>. If another person breathes them in, the infection is transmitted <sup>[3]</sup>.</li>
+                            <li><strong>What is Safe:</strong> You absolutely cannot spread the disease by sharing clothes, drinking from the same glass, eating off the same plate, hugging, kissing, or shaking hands <sup>[4]</sup>.</li>
+                            <li><strong>Latent Safety:</strong> People who have a sleeping (latent) infection cannot spread the bacteria to anyone else <sup>[1]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 2: Environmental Factors -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 2 ? null : 2" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 2">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Environmental Factors: Where Does It Spread?</h2>
+                            <p class="text-sm text-slate-500 mt-1">The bacteria thrive in crowded, poorly ventilated indoor spaces but are rapidly destroyed by nature.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 2 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 2" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>The Power of Sunlight:</strong> The bacteria are highly sensitive to fresh air and natural light; ultraviolet (UV) rays from the sun quickly destroy the bacteria&rsquo;s cellular structure <sup>[4]</sup>.</li>
+                            <li><strong>Outdoor Safety:</strong> Because of sunlight and wind acting as a natural disinfectant, the disease is rarely spread outdoors <sup>[4]</sup>.</li>
+                            <li><strong>High-Risk Environments:</strong> <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">Transmission almost always requires prolonged, frequent, or intense indoor contact in crowded settings with poor ventilation</span>, such as sharing a house, or living in homeless shelters, prisons, and busy nursing homes <sup>[1]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 3: Biological Triggers -->
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden">
+                    <button @click="active = active === 3 ? null : 3" class="w-full text-left cursor-pointer px-6 py-5 flex items-start justify-between gap-4" :aria-expanded="active === 3">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Biological Triggers: Who is Most Vulnerable?</h2>
+                            <p class="text-sm text-slate-500 mt-1">The true trigger for active disease is a weakened immune system, which allows the sleeping bacteria to wake up and multiply.</p>
+                        </div>
+                        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-1 transition-all duration-300" :class="active === 3 ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-show="active === 3" x-collapse x-cloak class="px-6 pb-6">
+                        <ul class="space-y-3 text-slate-700 leading-relaxed">
+                            <li><strong>Immune System Failure:</strong> Once the bacteria successfully enter a new body, certain medical conditions can act as biological triggers that break down the protective walls built by your immune system, allowing the bacteria to multiply out of control <sup>[5]</sup>.</li>
+                            <li><strong>Major Health Conditions:</strong> Conditions that heavily suppress immune function&mdash;such as HIV, severe diabetes, kidney disease, head and neck cancers, and treatments like chemotherapy or prescription steroids&mdash;drastically increase the risk of the sleeping bacteria waking up <sup>[6]</sup>.</li>
+                            <li><strong>Age Vulnerability:</strong> Babies, young children under the age of 5, and older adults over the age of 65 have naturally weaker immune systems, placing them at a much higher risk of rapid and severe disease progression <sup>[6]</sup>.</li>
+                            <li><strong>Lifestyle and Nutrition:</strong> <span class="text-base font-semibold text-blue-800 bg-blue-50/80 px-1.5 py-0.5 rounded-md inline box-decoration-clone leading-relaxed">Active smoking, heavy alcohol use, injection drug use, and severe malnutrition actively starve and damage the immune system&rsquo;s defenses</span> <sup>[6, 7]</sup>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- YouTube -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="max-w-2xl mx-auto overflow-hidden rounded-2xl shadow-lg border border-slate-200/60 my-8 transition-transform hover:scale-[1.01] duration-500">
+                    <div class="aspect-video w-full">
+                        <iframe src="https://www.youtube.com/embed/UKV8Zn7x0wM?hl=en&cc_lang_pref=en" title="CDC Pathogenesis and Transmission Animation" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-500 mt-4 mb-8 text-center">A clear, animated breakdown from the CDC showing exactly how the bacteria travel through the air and enter the lungs <sup>[8]</sup>.</p>
+            </div>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold text-blue-700 mb-4">Key Takeaways</h2>
+                    <ul class="space-y-3 text-slate-700 leading-relaxed">
+                        <li>TB is spread exclusively through the air when a person with an active lung infection coughs or sneezes; it is never spread by sharing food, clothing, or physical touch <sup>[1, 4]</sup>.</li>
+                        <li>The microscopic bacteria can linger in the air of poorly ventilated rooms for hours, but they are easily destroyed by outdoor sunlight and fresh air <sup>[2, 4]</sup>.</li>
+                        <li>The infection only turns into an active, dangerous disease if biological triggers&mdash;such as chronic illness (like HIV or diabetes), extreme age, or malnutrition&mdash;weaken your immune system <sup>[5, 6, 7]</sup>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-slate-600 mb-4">Now that you understand how the disease spreads and what triggers it, learn about the powerful medications and support systems used to defeat it on our next page:</p>
+                <a href="managing-tb.html" class="inline-flex items-center gap-2 bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_8px_20px_rgb(37,99,235,0.3)] hover:bg-blue-800 active:translate-y-0 shadow-lg shadow-blue-700/20">
+                    Managing TB: The Path to a Cure
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- References -->
+        <section class="px-4 sm:px-6 lg:px-8 py-6 pb-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">References</h2>
+                <div class="space-y-3">
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[1]</span> Centers for Disease Control and Prevention. Causes of Tuberculosis. CDC. Available from: https://www.cdc.gov/tb/causes/index.html</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[2]</span> M&eacute;decins Sans Fronti&egrave;res (MSF). Infographic: What are the effects of TB. MSF Access. Available from: https://msfaccess.org/infographic-what-are-effects-tb</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[3]</span> Centers for Disease Control and Prevention. Transmission and Pathogenesis of Tuberculosis. CDC. Available from: https://www.cdc.gov/tb/media/pdfs/Self_Study_Module_1_Transmission_and_Pathogenesis_of_Tuberculosis.pdf</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[4]</span> Tacoma-Pierce County Health Department. Tuberculosis Infographic. TPCHD. Available from: https://tpchd.org/wp-content/uploads/2023/12/TB-infographic.pdf</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[5]</span> Centers for Disease Control and Prevention. Tuberculosis Risk Factors. CDC. Available from: https://www.cdc.gov/tb/risk-factors/index.html</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[6]</span> Mayo Clinic. Tuberculosis - Symptoms and causes. Mayo Clinic. Available from: https://www.mayoclinic.org/diseases-conditions/tuberculosis/symptoms-causes/syc-20351250</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[7]</span> World Health Organization. Global tuberculosis report 2025. ReliefWeb. 2024. Available from: https://reliefweb.int/report/world/global-tuberculosis-report-2025</p>
+                    <p class="text-xs text-slate-500 leading-relaxed break-words break-all"><span class="font-semibold text-slate-600">[8]</span> Centers for Disease Control and Prevention. Transmission and pathogenesis of tuberculosis (TB). YouTube. Available from: https://www.youtube.com/watch?v=UKV8Zn7x0wM</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200 py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center text-sm text-slate-400">
+            <p>TB Info Hub &mdash; A patient education resource for BS3083. All medical content is referenced from peer-reviewed and institutional sources.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+</body>
+</html>
